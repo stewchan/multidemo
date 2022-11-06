@@ -12,182 +12,187 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "GotmAuth",
 "language": "GDScript",
-"path": "res://gotm/GotmAuth.gd"
+"path": "res://addons/gotm/GotmAuth.gd"
 }, {
 "base": "Reference",
 "class": "GotmBlob",
 "language": "GDScript",
-"path": "res://gotm/GotmBlob.gd"
+"path": "res://addons/gotm/GotmBlob.gd"
 }, {
 "base": "Reference",
 "class": "GotmConfig",
 "language": "GDScript",
-"path": "res://gotm/GotmConfig.gd"
+"path": "res://addons/gotm/GotmConfig.gd"
 }, {
 "base": "Reference",
 "class": "GotmContent",
 "language": "GDScript",
-"path": "res://gotm/GotmContent.gd"
+"path": "res://addons/gotm/GotmContent.gd"
 }, {
 "base": "Reference",
 "class": "GotmDebug",
 "language": "GDScript",
-"path": "res://gotm/GotmDebug.gd"
+"path": "res://addons/gotm/GotmDebug.gd"
 }, {
 "base": "Reference",
 "class": "GotmFile",
 "language": "GDScript",
-"path": "res://gotm/GotmFile.gd"
+"path": "res://addons/gotm/GotmFile.gd"
 }, {
 "base": "Reference",
 "class": "GotmLeaderboard",
 "language": "GDScript",
-"path": "res://gotm/GotmLeaderboard.gd"
+"path": "res://addons/gotm/GotmLeaderboard.gd"
 }, {
 "base": "Reference",
 "class": "GotmLobby",
 "language": "GDScript",
-"path": "res://gotm/GotmLobby.gd"
+"path": "res://addons/gotm/GotmLobby.gd"
 }, {
 "base": "Reference",
 "class": "GotmLobbyFetch",
 "language": "GDScript",
-"path": "res://gotm/GotmLobbyFetch.gd"
+"path": "res://addons/gotm/GotmLobbyFetch.gd"
 }, {
 "base": "Reference",
 "class": "GotmMark",
 "language": "GDScript",
-"path": "res://gotm/GotmMark.gd"
+"path": "res://addons/gotm/GotmMark.gd"
 }, {
 "base": "Reference",
 "class": "GotmPeriod",
 "language": "GDScript",
-"path": "res://gotm/GotmPeriod.gd"
+"path": "res://addons/gotm/GotmPeriod.gd"
 }, {
 "base": "Reference",
 "class": "GotmQuery",
 "language": "GDScript",
-"path": "res://gotm/GotmQuery.gd"
+"path": "res://addons/gotm/GotmQuery.gd"
 }, {
 "base": "Reference",
 "class": "GotmScore",
 "language": "GDScript",
-"path": "res://gotm/GotmScore.gd"
+"path": "res://addons/gotm/GotmScore.gd"
 }, {
 "base": "Reference",
 "class": "GotmUser",
 "language": "GDScript",
-"path": "res://gotm/GotmUser.gd"
+"path": "res://addons/gotm/GotmUser.gd"
+}, {
+"base": "InputEventAction",
+"class": "RawGesture",
+"language": "GDScript",
+"path": "res://RawGesture.gd"
 }, {
 "base": "Reference",
 "class": "_Gotm",
 "language": "GDScript",
-"path": "res://gotm/_impl/_Gotm.gd"
+"path": "res://addons/gotm/_impl/_Gotm.gd"
 }, {
 "base": "Reference",
 "class": "_GotmAuth",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmAuth.gd"
+"path": "res://addons/gotm/_impl/_GotmAuth.gd"
 }, {
 "base": "Reference",
 "class": "_GotmAuthLocal",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmAuthLocal.gd"
+"path": "res://addons/gotm/_impl/_GotmAuthLocal.gd"
 }, {
 "base": "Reference",
 "class": "_GotmBlob",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmBlob.gd"
+"path": "res://addons/gotm/_impl/_GotmBlob.gd"
 }, {
 "base": "Reference",
 "class": "_GotmBlobLocal",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmBlobLocal.gd"
+"path": "res://addons/gotm/_impl/_GotmBlobLocal.gd"
 }, {
 "base": "Reference",
 "class": "_GotmContent",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmContent.gd"
+"path": "res://addons/gotm/_impl/_GotmContent.gd"
 }, {
 "base": "Reference",
 "class": "_GotmContentLocal",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmContentLocal.gd"
+"path": "res://addons/gotm/_impl/_GotmContentLocal.gd"
 }, {
 "base": "Reference",
 "class": "_GotmDebugImpl",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmDebugImpl.gd"
+"path": "res://addons/gotm/_impl/_GotmDebugImpl.gd"
 }, {
 "base": "Reference",
 "class": "_GotmImpl",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmImpl.gd"
+"path": "res://addons/gotm/_impl/_GotmImpl.gd"
 }, {
 "base": "Reference",
 "class": "_GotmImplUtility",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmImplUtility.gd"
+"path": "res://addons/gotm/_impl/_GotmImplUtility.gd"
 }, {
 "base": "Reference",
 "class": "_GotmLeaderboard",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmLeaderboard.gd"
+"path": "res://addons/gotm/_impl/_GotmLeaderboard.gd"
 }, {
 "base": "Reference",
 "class": "_GotmMark",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmMark.gd"
+"path": "res://addons/gotm/_impl/_GotmMark.gd"
 }, {
 "base": "Reference",
 "class": "_GotmMarkLocal",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmMarkLocal.gd"
+"path": "res://addons/gotm/_impl/_GotmMarkLocal.gd"
 }, {
 "base": "Reference",
 "class": "_GotmPeriod",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmPeriod.gd"
+"path": "res://addons/gotm/_impl/_GotmPeriod.gd"
 }, {
 "base": "Reference",
 "class": "_GotmQuery",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmQuery.gd"
+"path": "res://addons/gotm/_impl/_GotmQuery.gd"
 }, {
 "base": "Reference",
 "class": "_GotmScore",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmScore.gd"
+"path": "res://addons/gotm/_impl/_GotmScore.gd"
 }, {
 "base": "Reference",
 "class": "_GotmScoreLocal",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmScoreLocal.gd"
+"path": "res://addons/gotm/_impl/_GotmScoreLocal.gd"
 }, {
 "base": "Reference",
 "class": "_GotmStore",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmStore.gd"
+"path": "res://addons/gotm/_impl/_GotmStore.gd"
 }, {
 "base": "Reference",
 "class": "_GotmUser",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmUser.gd"
+"path": "res://addons/gotm/_impl/_GotmUser.gd"
 }, {
 "base": "Reference",
 "class": "_GotmUserLocal",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmUserLocal.gd"
+"path": "res://addons/gotm/_impl/_GotmUserLocal.gd"
 }, {
 "base": "Reference",
 "class": "_GotmUtility",
 "language": "GDScript",
-"path": "res://gotm/_impl/_GotmUtility.gd"
+"path": "res://addons/gotm/_impl/_GotmUtility.gd"
 }, {
 "base": "Reference",
 "class": "_LocalStore",
 "language": "GDScript",
-"path": "res://gotm/_impl/_LocalStore.gd"
+"path": "res://addons/gotm/_impl/_LocalStore.gd"
 } ]
 _global_script_class_icons={
 "GotmAuth": "",
@@ -204,6 +209,7 @@ _global_script_class_icons={
 "GotmQuery": "",
 "GotmScore": "",
 "GotmUser": "",
+"RawGesture": "",
 "_Gotm": "",
 "_GotmAuth": "",
 "_GotmAuthLocal": "",
@@ -238,10 +244,39 @@ config/icon="res://icon.png"
 
 Global="*res://global.gd"
 Network="*res://Network.gd"
-Gotm="*res://gotm/Gotm.gd"
+Gotm="*res://addons/gotm/Gotm.gd"
+InputManager="*res://InputManager.gd"
 
 [input]
 
+ui_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
 up={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
@@ -272,6 +307,10 @@ shoot={
 , Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":1,"pressed":false,"doubleclick":false,"script":null)
  ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [rendering]
 
