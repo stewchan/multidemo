@@ -12,6 +12,7 @@ var screen_size
 
 func _ready():
 	screen_size = get_viewport_rect().size
+	set_position(screen_size / 2)
 	_update_health_bar()
 
 

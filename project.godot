@@ -247,6 +247,13 @@ Network="*res://Network.gd"
 Gotm="*res://addons/gotm/Gotm.gd"
 InputManager="*res://InputManager.gd"
 
+[display]
+
+window/size/width=812
+window/size/height=375
+window/handheld/orientation="sensor_landscape"
+window/stretch/mode="viewport"
+
 [input]
 
 ui_left={
