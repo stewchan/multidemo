@@ -7,18 +7,27 @@ var health_points = MAX_HP
 var is_alive = true
 var velocity = Vector2.ZERO
 var touch_target
+var screen_size
 
 
 func _ready():
+	screen_size = get_viewport_rect().size
 	_update_health_bar()
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	# Do nothing if player is dead
 	is_alive = health_points > 0
 	if not is_alive:
 		return
 
+	# Fix rifle orientation
+	if velocity.x > 0:
+		_rifle_right()
+	elif velocity.x < 0:
+		_rifle_left()
+
+	# Stop player when the touch target is reached
 	if touch_target != null:
 		if position.distance_to(touch_target) < 5:
 			touch_target = null
@@ -26,8 +35,12 @@ func _physics_process(delta):
 		else:
 			velocity = (touch_target - position).normalized()
 
+	# warning-ignore: return_value_discarded
 	move_and_collide(velocity * MOVE_SPEED)
+	position.x = clamp(position.x, 0, screen_size.x)
+	position.y = clamp(position.y, 0, screen_size.y)
 
+	# Update server with new player positions
 	if get_tree().is_network_server():
 		Network.update_position(int(name), position)
 
