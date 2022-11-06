@@ -10,6 +10,7 @@
 extents = Vector2( 27.5014, 70.4704 )
 
 [node name="Player" type="KinematicBody2D" groups=["players"]]
+position = Vector2( 1, 0 )
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
 

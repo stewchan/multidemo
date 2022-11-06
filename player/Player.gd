@@ -22,38 +22,23 @@ func _physics_process(_delta):
 	if not is_alive:
 		return
 
-	# Fix rifle orientation
-	if velocity.x > 0:
-		_rifle_right()
-	elif velocity.x < 0:
-		_rifle_left()
-
 	# Stop player when the touch target is reached
-	if touch_target != null:
-		if position.distance_to(touch_target) < 5:
-			touch_target = null
-			velocity = Vector2.ZERO
-		else:
-			velocity = (touch_target - position).normalized()
+	if touch_target != null and position.distance_to(touch_target) < 5:
+		touch_target = null
+		velocity = Vector2.ZERO
 
-	# warning-ignore: return_value_discarded
-	move_and_collide(velocity * MOVE_SPEED)
-	position.x = clamp(position.x, 0, screen_size.x)
-	position.y = clamp(position.y, 0, screen_size.y)
+	rpc("move", velocity)
 
 	# Update server with new player positions
-	if get_tree().is_network_server():
-		Network.update_position(int(name), position)
+	# if get_tree().is_network_server():
+	# 	Network.update_position(int(name), position)
 
 
-func _rifle_right():
-	$Rifle.position.x = abs($Rifle.position.x)
-	$Rifle.flip_h = false
-
-
-func _rifle_left():
-	$Rifle.position.x = -abs($Rifle.position.x)
-	$Rifle.flip_h = true
+remotesync func move(vel):
+	# warning-ignore: return_value_discarded
+	move_and_collide(vel * MOVE_SPEED)
+	position.x = clamp(position.x, 0, screen_size.x)
+	position.y = clamp(position.y, 0, screen_size.y)
 
 
 func _update_health_bar():
@@ -68,7 +53,7 @@ func damage(value):
 	_update_health_bar()
 
 
-sync func _die():
+remotesync func _die():
 	$RespawnTimer.start()
 	set_physics_process(false)
 	$Rifle.set_process(false)
@@ -100,9 +85,11 @@ func _input(event):
 	if not (is_network_master() and is_alive):
 		return
 
-	elif event is InputEventScreenTouch or event is InputEventScreenDrag:
+	var shooting = false
+	if event is InputEventScreenTouch or event is InputEventScreenDrag:
 		touch_target = event.position
-
+		velocity = (touch_target - position).normalized()
+		shooting = true
 	elif event is InputEventKey:
 		if event.is_pressed():
 			if Input.is_action_pressed("ui_right"):
@@ -113,6 +100,16 @@ func _input(event):
 				velocity.y -= 1
 			if Input.is_action_pressed("ui_down"):
 				velocity.y += 1
+			if Input.is_action_pressed("shoot"):
+				shooting = true
 			velocity = velocity.normalized()
 		else:
 			velocity = Vector2.ZERO
+
+	# Fix rifle orientation
+	if velocity != Vector2.ZERO:
+		var facing_left = velocity.x < 0
+		$Rifle.orient(facing_left)
+
+	if shooting:
+		$Rifle.shoot()
