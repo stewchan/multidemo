@@ -2,7 +2,7 @@ extends Node
 
 const DEFAULT_IP = "127.0.0.1"
 const DEFAULT_PORT = 31400
-const MAX_PLAYERS = 5
+const MAX_PLAYERS = 4
 var screen_width = ProjectSettings.get_setting("display/window/size/width")
 var screen_height = ProjectSettings.get_setting("display/window/size/height")
 
@@ -71,6 +71,5 @@ remote func _send_player_info(id, info):
 	$"/root/Game/".add_child(new_player)
 	new_player.init(info.name, info.position, true)
 
-
-func update_position(id, position):
-	players[id].position = position
+# func update_position(id, position):
+# 	players[id].position = position
