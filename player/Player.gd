@@ -3,11 +3,12 @@ extends KinematicBody2D
 const MOVE_SPEED = 10.0
 const MAX_HP = 100
 
-var health_points = MAX_HP
-var is_alive = true
-var velocity = Vector2.ZERO
+var health_points := MAX_HP
+var is_alive := true
+var velocity := Vector2.ZERO
 var touch_target
 var screen_size
+var weapon
 
 
 func _ready():
@@ -22,7 +23,7 @@ func _physics_process(_delta):
 	if not is_alive:
 		return
 
-	# Stop player when the touch target is reached
+	# Stop moving when the touch target is reached
 	if touch_target != null and position.distance_to(touch_target) < 5:
 		touch_target = null
 		velocity = Vector2.ZERO
@@ -35,17 +36,18 @@ func _physics_process(_delta):
 
 
 remotesync func move(vel):
-	# warning-ignore: return_value_discarded
-	move_and_collide(vel * MOVE_SPEED)
+	var collision = move_and_collide(vel * MOVE_SPEED, false)
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
+	if collision and collision.collider.has_method("explode"):
+		rpc("damage", collision.collider.explode())
 
 
 func _update_health_bar():
 	$GUI/HealthBar.value = health_points
 
 
-func damage(value):
+remotesync func damage(value):
 	health_points -= value
 	if health_points <= 0:
 		health_points = 0
@@ -107,9 +109,10 @@ func _input(event):
 			velocity = Vector2.ZERO
 
 	# Fix rifle orientation
-	if velocity != Vector2.ZERO:
-		var facing_left = velocity.x < 0
-		$Rifle.orient(facing_left)
+	if weapon != null:
+		if velocity != Vector2.ZERO:
+			var facing_left = velocity.x < 0
+			$Rifle.orient(facing_left)
 
-	if shooting:
-		$Rifle.shoot()
+		if shooting:
+			$Rifle.shoot()

@@ -12,6 +12,7 @@ extents = Vector2( 27.5014, 70.4704 )
 [node name="Player" type="KinematicBody2D" groups=["players"]]
 position = Vector2( 1, 0 )
 scale = Vector2( 0.5, 0.5 )
+collision_mask = 2
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -21,6 +22,7 @@ shape = SubResource( 1 )
 texture = ExtResource( 2 )
 
 [node name="Rifle" parent="." instance=ExtResource( 3 )]
+visible = false
 
 [node name="Shadow" type="Sprite" parent="."]
 position = Vector2( 0, 57.4676 )

@@ -1,6 +1,23 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Game.gd" type="Script" id=1]
+[ext_resource path="res://characters/Mob.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 480, 0, 0, 0, 0, 0, 480, 856, 0, 0, 0, 0, 0, 856, 0, 0, 0, 0, 0, 0 )
+}
 
 [node name="Game" type="Node"]
 script = ExtResource( 1 )
+mob_scene = ExtResource( 2 )
+
+[node name="MobPath" type="Path2D" parent="."]
+curve = SubResource( 1 )
+
+[node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
+
+[node name="MobTimer" type="Timer" parent="."]
+wait_time = 0.4
+
+[connection signal="timeout" from="MobTimer" to="." method="_on_MobTimer_timeout"]

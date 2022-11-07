@@ -1,11 +1,14 @@
 extends Control
 
-onready var text = $VBoxContainer/HBoxContainer/TextField
+onready var text = $TextField
 
 var _player_name = ""
 
 
 func _ready():
+	# Set up lobby system
+	# warning-ignore:return_value_discarded
+
 	text.grab_focus()
 
 
